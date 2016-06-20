@@ -1,0 +1,28 @@
+// ==========================================================================
+// Contact infomation
+// ==========================================================================
+
+.contact-info {
+  @include rem-fallback(margin-bottom, 1.5);
+
+  .contact-name {
+    font-weight: 700;
+  }
+
+  .contact-field {
+    display: block;
+    @include rem-fallback(margin-bottom, 0.5);
+  }
+
+  .all-caps {
+    display: block; // Make a new line
+  }
+}
+
+// Opening hours
+.hours {
+
+  p {
+    @include rem-fallback(margin-bottom, 0.5);
+  }
+}

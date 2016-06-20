@@ -1,0 +1,289 @@
+// ==========================================================================
+//   Base
+// ==========================================================================
+
+
+// ==========================================================================
+// Box-sizing
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+// ==========================================================================
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+// ==========================================================================
+// Default
+// ==========================================================================
+
+html {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  font-size: ($text-size / 16 * 100) * 1%; // 112.5%
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  line-height: $line-height;
+  overflow-x: hidden;
+
+  @include font-size($text-size);
+}
+
+::-moz-selection {
+  @include selection();
+}
+
+::selection {
+  @include selection();
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+blockquote {
+  border-left: 3px solid $grey;
+  font-style: italic;
+
+  @include rem-fallback(padding-left, 0.5);
+  @include rem-fallback(margin, 0, 0, 2, 0);
+
+  .cite {
+    font-style: normal;
+    &:before {
+      content: '\2014';
+    }
+  }
+}
+
+pre {
+  background: $grey-lighter;
+
+  @include rem-fallback(padding, 0.5);
+  @include rem-fallback(margin, 0, 0, 2, 0);
+}
+
+code {
+  font-family: Consolas, monaco, monospace;
+
+  @include font-size($text-size - 4);
+}
+
+address {
+  font-style: normal;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  @include font-size($text-size - 4);
+  @include rem-fallback(margin, 0.5, 0, 0, 0);
+}
+
+a {
+  outline: 0; // Remove outline
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
+
+  @include link-colour();
+}
+
+::-webkit-input-placeholder {
+   color: $grey-light;
+}
+
+::-moz-placeholder {
+   color: $grey-light;
+}
+
+
+// ==========================================================================
+// Web font events
+// ==========================================================================
+
+.wf-loading { // When web fonts are loading
+  visibility: hidden;
+}
+
+.wf-active { // When web fonts are active
+  visibility: visible;
+}
+
+.wf-inactive { // When web fonts are inactive
+  visibility: visible;
+}
+
+// ==========================================================================
+// Typography
+// http://modularscale.com/scale/?px1=18&px2=190&ra1=1.618
+// ==========================================================================
+
+html, button, input, select, textarea {
+  color: $text-colour;
+  font-family: $font-body;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+.h1 {
+  @include font-size(47.123);
+}
+
+h2,
+.h2 {
+  @include font-size(33.441);
+}
+
+h3,
+.h3 {
+  @include font-size(29.124);
+}
+
+h4,
+.h4 {
+  @include font-size(27.723);
+}
+
+h5,
+.h5 {
+  @include font-size(20.668);
+}
+
+h6,
+.h6 {
+  text-transform: uppercase;
+
+  @include font-size(18);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $black;
+  font-family: $font-title;
+  font-weight: 400;
+  line-height: $header-line-height;
+
+  @include rem-fallback(margin, 0, 0, 1, 0);
+
+  &.underline {
+    border-bottom: 1px solid $border-colour;
+    padding-bottom: rem(8);
+  }
+}
+
+p,
+ul,
+ol,
+dl {
+  color: $text-colour;
+
+  @include rem-fallback(margin, 0, 0, 2, 0);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// List
+
+ul,
+ol {
+  margin-left: rem(30);
+}
+
+
+// Definition list
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  @include rem-fallback(margin, 0, 0, 1, 1);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// Horizontal-rule
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  @include rem-fallback(margin, 1, 0, 1, 0);
+}
+
+// ==========================================================================
+// Forms
+// ==========================================================================
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  line-height: 1.6;
+  resize: vertical;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=url],
+textarea {
+  @include font-size(16);
+
+  -webkit-appearance: none;
+  border: 1px solid $grey-light;
+  border-radius: 0;
+  color: $text-colour;
+  outline: none;
+  padding: rem(12);
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  width: 100%;
+
+  &:focus {
+    border-color: darken($grey-light, 50%);
+    color: inherit;
+  }
+}

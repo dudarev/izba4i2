@@ -1,0 +1,37 @@
+// ==========================================================================
+// Comments
+// ==========================================================================
+
+#comments {
+  border-bottom: 1px solid $border-colour;
+
+  @include rem-fallback(margin-bottom, 2);
+}
+
+.comment-list {
+
+  @extend .l-stacked;
+
+  li {
+    @include rem-fallback(margin-bottom, 2);
+  }
+
+  p {
+    @include rem-fallback(margin-bottom, 0.5);
+  }
+
+  .comment-author {
+    @extend .h5;
+
+    @include rem-fallback(margin-bottom, 0.5);
+  }
+
+  .comment-meta {
+    color: $grey-light;
+  }
+
+  .depth-2,
+  .depth-3 {
+    @include rem-fallback(margin, 2, 0, 0, 2);
+  }
+}

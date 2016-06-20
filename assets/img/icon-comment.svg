@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>icon-comment</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M8,0.747 C3.5816699,0.747 0,3.71911488 0,7.3853812 C0,9.51718277 1.2112233,11.4140366 3.09351456,12.6286449 C3.672,14.1046762 2.37102913,15.3579399 0.998834951,15.6947937 C2.51339806,15.8279138 5.20598058,15.6124308 7.24807767,13.9943499 C11.9780194,14.3604595 16,11.2726527 16,7.3853812 C16,3.71911488 12.4182524,0.747 8,0.747 L8,0.747 Z" id="speech-bubble-6-icon" fill="#999999" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

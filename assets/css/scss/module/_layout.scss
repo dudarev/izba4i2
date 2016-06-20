@@ -1,0 +1,52 @@
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+
+// ==========================================================================
+// Main section for standard page
+// ==========================================================================
+
+.page .l-main {
+  position: relative;
+}
+
+
+// ==========================================================================
+// Container
+// ==========================================================================
+
+.l-constrained {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(900);
+  padding-right: rem(12);
+  padding-left: rem(12);
+}
+
+.l-row {
+  padding-top: rem(29);
+  padding-bottom: rem(29);
+
+  @include respond-to(tablet-small) {
+    padding-top: rem(47);
+    padding-bottom: rem(47);
+  }
+
+  @include respond-to(tablet-land) {
+    padding-top: rem(76);
+    padding-bottom: rem(76);
+  }
+}
+
+
+// ==========================================================================
+// Single column. Used in menu and blog page
+// Max width 600px
+// ==========================================================================
+
+.l-single-column { // Set max width 600px and align centre
+  max-width: $tablet-small;
+  margin-left: auto;
+  margin-right: auto;
+}

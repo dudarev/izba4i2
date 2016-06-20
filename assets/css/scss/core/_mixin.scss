@@ -1,0 +1,187 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+
+// ==========================================================================
+// Font size
+//
+// Example CSS:
+// .title {
+//   @include font-size(32);
+// }
+// ==========================================================================
+
+@mixin font-size($size) {
+  font-size: $size + px;
+  font-size: ($size / $base-font-size) + rem;
+}
+
+
+// ==========================================================================
+// REM fallback
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+//
+// Example CSS:
+//
+// p {
+//   @include rem-fallback(margin, 10, 20, 30, 40);
+// }
+// ==========================================================================
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{ $pxValues + $value * $base-font-size }px;
+
+    @if $i < $max {
+      $pxValues: #{ $pxValues + " " };
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{ $remValues + $value }rem;
+
+    @if $i < $max {
+      $remValues: #{ $remValues + " " };
+    }
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
+
+// ==========================================================================
+// Selection
+// ==========================================================================
+
+@mixin selection() {
+  color: $white;
+  background: $black;
+  text-shadow: none;
+}
+
+// ==========================================================================
+// Media queries
+//
+// These are based on the different device widths in _variable.scss.
+// Allows you to use inline media queries.
+//
+// Example CSS:
+//
+// .foobar {
+//   @include respond-to(tablet-small) {
+//     // CSS styles
+//   }
+// }
+// ==========================================================================
+
+@mixin respond-to($screen) {
+  @if $screen == tablet-small{
+    @media only screen and (min-width: $tablet-small) {
+      @content;
+    }
+  }
+  @else if $screen == tablet-port {
+    @media only screen and (min-width: $tablet-port) {
+      @content;
+    }
+  }
+  @else if $screen == tablet-land {
+    @media only screen and (min-width: $tablet-land) {
+      @content;
+    }
+  }
+  @else if $screen == wide-screen {
+    @media only screen and (min-width: $wide-screen) {
+      @content;
+    }
+  }
+}
+
+
+// ==========================================================================
+// Link colour
+//
+// The colours are set in _variable.scss.
+//
+// Example CSS:
+//
+// a {
+//   @include link-colour($border: false);
+// }
+// ==========================================================================
+
+// Content link colour
+@mixin link-colour($normal: $standard-link-normal, $hover: $standard-link-hover, $active: $standard-link-active, $visited: $standard-link-visited, $focus: $standard-link-focus, $border: true) {
+
+  color: $normal;
+  text-decoration: none;
+
+  // Standard link includes border
+  @if $border == true {
+    border-bottom: 1px solid lighten($normal, 0);
+  } @else {
+    border-bottom: none;
+  }
+
+  &:visited { // Visited status
+    color: $visited;
+
+    @if $border == true {
+      border-bottom: 1px solid $visited;
+    } @else {
+      border-bottom: none;
+    }
+  }
+
+  &:focus { // Focus status
+    background: $black;
+    color: $focus;
+  }
+
+  &:hover { // Hover status
+    color: $hover;
+
+    @if $border == true {
+      border-bottom: 1px solid $hover;
+    } @else {
+      border-bottom: none;
+    }
+  }
+
+  &:active { // Active status
+    color: $active;
+
+    @if $border == true {
+      border-bottom: 1px solid $active;
+    } @else {
+      border-bottom: none;
+    }
+  }
+}
+
+// ==========================================================================
+// Letterpress
+// Add text drop shadow
+// ==========================================================================
+@mixin letterpress($opacity) {
+  text-shadow: black($opacity) 0 1px 0;
+}
+
+// ==========================================================================
+// Opacity
+// Add text drop shadow
+// ==========================================================================
+@mixin opacity($value) {
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}

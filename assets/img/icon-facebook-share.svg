@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="25px" viewBox="0 0 13 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>icon-facebook-share</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M3.64788421,8.17305825 L0.923,8.17305825 L0.923,12.4464806 L3.64788421,12.4464806 L3.64788421,25 L8.88777895,25 L8.88777895,12.3930825 L12.5434842,12.3930825 L12.9326632,8.17305825 L8.88777895,8.17305825 L8.88777895,5.76923544 C8.88777895,4.77421117 9.09632632,4.38027913 10.0970632,4.38027913 L12.9326,4.38027913 L12.9326,0 L9.30474737,0 C5.40575789,0 3.64788421,1.64921117 3.64788421,4.80770631 L3.64788421,8.17305825 L3.64788421,8.17305825 Z" id="facebook-icon" fill="#000000" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

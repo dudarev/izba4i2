@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Section
+   ========================================================================== */
+
+
+section {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+// ==========================================================================
+// Section header
+// ==========================================================================
+
+.section-header {
+  margin-bottom: rem(29);
+}
+
+// ==========================================================================
+// Section title
+// ==========================================================================
+
+.section-title {
+  margin: 0;
+
+  @include font-size(29);
+  @include respond-to(tablet-small) {
+    @include font-size(47);
+  }
+}
+
+
+// ==========================================================================
+// Section content
+// ==========================================================================
+
+.section-content {
+  @include respond-to(tablet-small) {
+    @include font-size(18);
+  }
+}
+
+
+// ==========================================================================
+// Section - hight contrast
+// Used in homepage and footer
+// ==========================================================================
+
+.section-high-contrast {
+  background: $black;
+  color: $white;
+
+  // Add subtle chalkboard background pattern when the screen size is bigger than table landscape
+  @include respond-to(tablet-land) {
+    background-image: url('../img/bg-footer.png');
+    background-repeat: repeat;
+  }
+
+  & * {
+    color: inherit;
+  }
+
+  a {
+    @include link-colour($normal: $white, $hover: $standard-hc-link-hover, $active: $standard-hc-link-active, $visited: $white, $focus: $standard-hc-link-focus);
+
+    &:focus {
+      background: $white;
+    }
+  }
+}
