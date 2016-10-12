@@ -15,6 +15,21 @@ handlers:
 - url: /assets
   static_dir: assets
 
-- url: /.*
+- url: /img
+  static_dir: img
+
+- url: /js
+  static_dir: js
+
+- url: /
   static_files: index.html
   upload: index\.html
+
+- url: /index.html
+  static_files: index.html
+  upload: index\.html
+
+- url: /index2.html
+  static_files: index2.html
+  upload: index2\.html
+
