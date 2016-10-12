@@ -7,13 +7,28 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Изба-читальня</title>
 
-    <meta name="description" content="This is a demo site of Moka template">
+    <meta name="description" content="Изба-читальня">
+    <meta name="Keywords" content="IZBA, Читальня, бар, кальяны, чай, кофе, алкоголь, коктейли"> 
+	<meta name = "robots" content = "all">
+    <meta property = "business:contact_data:country_name" content = "Украина">
+    <meta property = "business:contact_data:locality" content = "Мариуполь">
+	<meta property = "business:contact_data:street_address" content = "проспект Мира 40">
 
     <!-- Viewpoint for mobile browsers -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google web fonts loader - https://github.com/typekit/webfontloader -->
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85415895-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     <script>
       WebFont.load({
         google: {
@@ -24,6 +39,9 @@
 
     <!-- Main style -->
     <link rel='stylesheet' href='assets/css/style.css'>
+    
+  
+
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="#">
@@ -52,14 +70,14 @@
           <!-- Navigation -->
           <nav role="navigation" class="nav--primary">
             <ul class="nav">
-            
+			<li><a href="index2.html">Меню</a><li>
             </ul>
           </nav>
 
           <!-- Trading hours -->
           <a class="hours">
             <span><img src="assets/img/icon-hours.svg" alt="Время работы" /></span>
-            12:00 - 00:00
+            13:00 - 01:00
           </a>
         </div>
       </div>
@@ -95,10 +113,27 @@
 <p>У нас найдется место для шумной компании, для любителей посидеть с чашкой кофе и книгой. В лаунж-зале "Underground" вы погрузитесь в приятное царство мягких кресел и кальянов.</p>
                 <p>Мы всегда рады видеть Вас!</p>
               </div>
+			  							
+
             </div>
           </div>
         </div>
       </section>
+      <div id="wrapper">
+
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="img/1.jpg" alt="" />
+               	<img src="img/2.jpg" alt="" />
+                <img src="img/3.jpg" alt="" />
+                <img src="img/4.jpg" alt="" />
+                <img src="img/5.jpg" alt="" />
+                <img src="img/6.jpg" alt="" />
+            </div>
+
+        </div>
+
+    									</div>
       
 
 
@@ -109,8 +144,7 @@
         <div class="l-constrained l-grid">
           <div class="contact-item l-col-1-3">
             <h3 class="contact-title">Время работы</h3>
-            <p>с 12:00 до 00:00 </br>
-               без выходных</p>
+            <p>с 13:00 до 01:00</p>
           </div>
           <div class="contact-item l-col-1-3">
             <h3 class="contact-title">Мы находимя по адресу</h3>
@@ -134,8 +168,19 @@
       </p>
     </footer>
 
-    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <script src='assets/js/main.js'></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+
+	
+        
+	
+	
   </body>
+ 
 </html>
