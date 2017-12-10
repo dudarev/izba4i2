@@ -8,18 +8,20 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /Logo\.png
-  static_files: Logo.png
-  upload: Logo\.png
-
-- url: /assets
-  static_dir: assets
+- url: /css
+  static_dir: css
 
 - url: /img
   static_dir: img
 
 - url: /js
   static_dir: js
+  
+- url: /sass
+  static_dir: sass
+  
+- url: /vendor
+  static_dir: vendor
 
 - url: /
   static_files: index.html
@@ -29,7 +31,5 @@ handlers:
   static_files: index.html
   upload: index\.html
 
-- url: /index2.html
-  static_files: index2.html
-  upload: index2\.html
+
 
