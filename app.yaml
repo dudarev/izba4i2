@@ -1,4 +1,3 @@
-version: 1
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -8,13 +7,28 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /Logo\.png
-  static_files: Logo.png
-  upload: Logo\.png
+- url: /css
+  static_dir: css
 
-- url: /assets
-  static_dir: assets
+- url: /img
+  static_dir: img
 
-- url: /.*
+- url: /js
+  static_dir: js
+  
+- url: /sass
+  static_dir: sass
+  
+- url: /vendor
+  static_dir: vendor
+
+- url: /
   static_files: index.html
   upload: index\.html
+
+- url: /index.html
+  static_files: index.html
+  upload: index\.html
+
+
+
